@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder - Mid-Fidelity Prototype</title>
+    <!-- Link to the CSS stylesheet in the css folder -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main class="container">
+        <!-- Top sentence interface with dropdowns based on sketch -->
+        <section class="sentence-interface" aria-label="Recipe preferences sentence interface">
+            <p class="sentence-line">
+                HUNGRY FOR
+            </p>
+
+            <p class="sentence-line">
+                <label for="craving-select">SOMETHING</label>
+                <select id="craving-select" class="dropdown" name="craving">
+                    <option value="Spicy" selected>Spicy</option>
+                    <option value="Savory">Savory</option>
+                    <option value="Sweet">Sweet</option>
+                </select>
+            </p>
+
+            <p class="sentence-line">
+                <label for="time-select">&amp; HAVE</label>
+                <select id="time-select" class="dropdown" name="time">
+                    <option value="15 mins">15 mins</option>
+                    <option value="30 mins" selected>30 mins</option>
+                    <option value="60 mins">60 mins</option>
+                </select>
+            </p>
+
+            <p class="sentence-line">
+                <label for="ingredient-select">AND</label>
+                <select id="ingredient-select" class="dropdown" name="ingredient">
+                    <option value="Chicken" selected>Chicken</option>
+                    <option value="Beef">Beef</option>
+                    <option value="Tofu">Tofu</option>
+                </select>
+            </p>
+        </section>
+
+        <!-- Recipes Results Section from sketch -->
+        <section class="recipes-section" aria-label="Recipe Results">
+            <h2 class="recipes-heading">RECIPES</h2>
+            <div id="recipes-container" class="recipes-grid">
+                <!-- Recipe cards dynamically populated by js/app.js -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Connect JavaScript for interactive recipe filtering -->
+    <script src="js/app.js"></script>
+</body>
+</html>
